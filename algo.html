@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Management System</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <!-- Add Item Form -->
+            <h2>Add new Item</h2>
+            <div class="add-form">
+                <input type="text" id="courseTitle" placeholder="Course title">
+                <input type="number" id="coursePrice" placeholder="Price">
+                <button id="addCourse">Add Item</button>
+            </div>
+
+            <!-- Sorting Section -->
+            <div class="sorting-section">
+                <h2>Sort Item</h2>
+                <select id="sortBy">
+                    <option value="title">Sort by Name</option>
+                    <option value="price">Sort by Price</option>
+                </select>
+                <select id="sortAlgorithm">
+                    <option value="bubbleSort">Bubble Sort</option>
+                    <option value="insertionSort">Insertion Sort</option>
+                    <option value="quickSort">Quick Sort</option>
+                </select>
+                <button id="sortButton">Sort</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Search Header -->
+            <div class="search-header">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search courses...">
+                    <div class="search-controls">
+                        <select id="searchBy">
+                            <option value="title">Search by Name</option>
+                            <option value="price">Search by Price</option>
+                        </select>
+                        <select id="searchAlgorithm">
+                            <option value="linear">Linear Search</option>
+                            <option value="binary">Binary Search</option>
+                            <option value="fuzzy">Fuzzy Search</option>
+                        </select>
+                        <button id="searchButton">Search</button>
+                    </div>
+                </div>
+
+                <!-- Performance Display -->
+                <div class="performance-display" id="searchPerformance">
+                    Search time: 0.00ms
+                </div>
+                <div class="performance-display" id="sortingPerformance">
+                    Sorting time: 0.00ms
+                </div>
+                <div class="warning" id="searchWarning" style="display: none;">
+                    Binary search requires a sorted list. Please sort the list first.
+                </div>
+            </div>
+
+            <!-- Course Grid -->
+            <div class="course-grid" id="courseGrid">
+                <!-- Course cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+ <script src="test.js"></script>
+</body>
+</html>
